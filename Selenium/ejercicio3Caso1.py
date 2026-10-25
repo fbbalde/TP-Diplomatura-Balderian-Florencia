@@ -41,6 +41,8 @@ def test_verificar_orden_por_precio():
     for elemento in elementos:
         precios.append(float(elemento.text.replace('$', '')))
 
+    # Verifico que los productos estén ordenados con precios de menor a mayor
+    
     assert precios, "No se encontraron precios de productos"
     assert precios == sorted(precios), (
         f"Los precios no están ordenados de menor a mayor: {precios}"
